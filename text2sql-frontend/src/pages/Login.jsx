@@ -26,7 +26,7 @@ const Login = () => {
       formData.append("password", password);
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/login",
+        `${import.meta.env.VITE_API_URL}/login`,
         formData,
         {
           headers: {
@@ -38,9 +38,12 @@ const Login = () => {
       const token = response.data.access_token;
 
       // 2. Immediately fetch the user's profile using the new token
-      const userResponse = await axios.get("http://127.0.0.1:8000/users/me", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const userResponse = await axios.get(
+        `${import.meta.env.VITE_API_URL}/users/me`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        },
+      );
 
       // 3. Save everything to Redux
       dispatch(loginSuccess({ user: userResponse.data, token }));

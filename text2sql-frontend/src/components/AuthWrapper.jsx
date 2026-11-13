@@ -18,9 +18,12 @@ const AuthWrapper = ({ children }) => {
 
       try {
         // Verify token with backend
-        const response = await axios.get("http://127.0.0.1:8000/users/me", {
-          headers: { Authorization: `Bearer ${token}` },
-        });
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URL}/users/me`,
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          },
+        );
 
         // Token is valid! Save user to Redux
         dispatch(loginSuccess({ user: response.data, token }));

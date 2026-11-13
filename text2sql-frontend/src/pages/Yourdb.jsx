@@ -18,9 +18,12 @@ const Yourdb = () => {
 
   const fetchConnections = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:8000/connections", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_URL}/connections`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        },
+      );
       setConnections(response.data);
     } catch (error) {
       console.error("Failed to fetch connections", error);
@@ -39,7 +42,7 @@ const Yourdb = () => {
 
     try {
       await axios.post(
-        "http://127.0.0.1:8000/connections",
+        `${import.meta.env.VITE_API_URL}/connections`,
         { name: dbName, db_url: dbUrl },
         { headers: { Authorization: `Bearer ${token}` } },
       );

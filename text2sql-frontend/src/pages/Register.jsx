@@ -17,10 +17,13 @@ const Register = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/register", {
-        username: username,
-        password: password,
-      });
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_URL}/register`,
+        {
+          username: username,
+          password: password,
+        },
+      );
 
       localStorage.setItem("token", response.data.access_token);
       navigate("/choose-your-database"); // Redirect to chat page
