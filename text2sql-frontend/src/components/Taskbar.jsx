@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { logout } from "../store/authSlice";
 import { setPanelOpen, togglePanel } from "../store/uiSlice";
-import logo from "../assets/logo.svg";
+import logo from "../assets/pism.png";
 
 const Taskbar = () => {
   // Get the authentication status from Redux
