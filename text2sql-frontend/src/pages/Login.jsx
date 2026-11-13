@@ -54,7 +54,7 @@ const Login = () => {
       if (err.response && err.response.data && err.response.data.detail) {
         setError(err.response.data.detail);
       } else {
-        setError("Something went wrong. Please try again.");
+        setError(`Error: ${err.message}`);
       }
     } finally {
       setLoading(false);
