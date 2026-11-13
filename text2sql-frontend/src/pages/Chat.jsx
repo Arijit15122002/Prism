@@ -14,6 +14,8 @@ import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import logo from "../assets/logo.svg";
+import dataServer from "../assets/data-server.png";
 
 const API = `${import.meta.env.VITE_API_URL}`;
 
@@ -549,11 +551,7 @@ const Chat = () => {
                       className="flex items-start gap-3 sm:gap-4 mb-6 sm:mb-8"
                     >
                       <div className="shrink-0 w-8 h-8 rounded-full bg-[#181818] border border-white/10 flex items-center justify-center mt-0.5">
-                        <img
-                          src="../src/assets/prism.png"
-                          alt=""
-                          className="h-4 w-4"
-                        />
+                        <img src={logo} alt="" className="h-4 w-4" />
                       </div>
                       <div
                         className={`flex-1 min-w-0 forum text-[15px] sm:text-[16px] leading-7 text-[#e2e2e2] break-words ${
@@ -596,11 +594,7 @@ const Chat = () => {
                 {isSending && (
                   <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
                     <div className="shrink-0 w-8 h-8 rounded-full bg-[#181818] border border-white/10 flex items-center justify-center">
-                      <img
-                        src="../src/assets/prism.png"
-                        alt=""
-                        className="h-4 w-4"
-                      />
+                      <img src={logo} alt="" className="h-4 w-4" />
                     </div>
                     <div className="flex items-center gap-1.5">
                       <span className="w-2 h-2 rounded-full bg-[#cdcdcd] animate-bounce [animation-delay:-0.3s]" />

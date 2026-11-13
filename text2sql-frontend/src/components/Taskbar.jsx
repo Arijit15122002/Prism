@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { logout } from "../store/authSlice";
 import { setPanelOpen, togglePanel } from "../store/uiSlice";
+import logo from "../assets/logo.svg";
 
 const Taskbar = () => {
   // Get the authentication status from Redux
@@ -62,7 +63,7 @@ const Taskbar = () => {
                   alt=""
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5"
                 /> */}
-                <img src="../src/assets/prism.png" alt="" className="h-8 w-8" />
+                <img src={logo} alt="" className="h-8 w-8" />
               </div>
               <div className="flex flex-row text-2xl gap-1 font-light tracking-wider">
                 <span className="forum">Prism</span>
