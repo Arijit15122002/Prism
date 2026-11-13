@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+python-dotenv
+openai
+beanie
+motor
+pymongo
+passlib
+bcrypt
+python-jose[cryptography]
+python-multipart
+pydantic
