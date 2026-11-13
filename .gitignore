@@ -1,0 +1,12 @@
+# Python Backend
+text2sql-backend/.venv/
+__pycache__/
+*.pyc
+.env
+app.db
+
+# React Frontend
+text2sql-frontend/node_modules/
+dist/
+.env
+.DS_Store
