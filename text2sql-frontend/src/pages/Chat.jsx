@@ -14,7 +14,7 @@ import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import logo from "../assets/pism.png";
+import logo from "../assets/prism.png";
 
 const API = `${import.meta.env.VITE_API_URL}`;
 

@@ -1,14 +1,14 @@
 fastapi
 uvicorn[standard]
 sqlalchemy
-psycopg2-binary
+psycopg[binary]
 python-dotenv
 openai
 beanie
 motor
 pymongo
 passlib
-bcrypt
+bcrypt==4.0.1
 python-jose[cryptography]
 python-multipart
 pydantic
