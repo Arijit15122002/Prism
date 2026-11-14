@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { Plus, Loader } from "lucide-react";
+import { database } from "../src/assets/database.png";
 
 const Yourdb = () => {
   const { token } = useSelector((state) => state.auth);
@@ -118,7 +119,7 @@ const Yourdb = () => {
             onClick={() => setNewDbFormOpen(true)}
           >
             <img
-              src="../src/assets/database.png"
+              src={database}
               alt=""
               className="w-20 h-20 group-hover:scale-105 transition-transform"
             />
