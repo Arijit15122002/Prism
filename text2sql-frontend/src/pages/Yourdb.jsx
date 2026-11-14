@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { Plus, Loader } from "lucide-react";
-import database from "../src/assets/database.png";
+import database from "../assets/database.png";
 
 const Yourdb = () => {
   const { token } = useSelector((state) => state.auth);
